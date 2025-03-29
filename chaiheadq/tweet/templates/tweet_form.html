@@ -6,5 +6,11 @@ Coffee or Tweet
 
 {% block content %}
 <h1 class="text-center mt-4">Willcommen zur Django project</h1>
+
+<h2>
+  {% if form.instance.pk %}Edit Tweet 
+  {% else %} Create Tweet 
+  {% endif %}
+</h2>
 {% endblock content %}
 

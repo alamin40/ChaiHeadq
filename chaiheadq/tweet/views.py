@@ -20,9 +20,9 @@ def tweet_create(request):
       tweet.save()
       return redirect('tweet_list')
     
-    else:
-      form = TweetForm()
-    return render(request, 'tweet_form.html', {'form': form})
+  else:
+    form = TweetForm()
+  return render(request, 'tweet_form.html', {'form': form})
   
 def tweet_edit(request, tweet_id):
   tweet = get_object_or_404(Tweet, pk = tweet_id, user = request.user)
